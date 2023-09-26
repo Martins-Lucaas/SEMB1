@@ -1,0 +1,4 @@
+A versão iterativa do cálculo do fatorial geralmente executa menos operações e usa menos memória do que a versão recursiva. 
+A versão iterativa utiliza um loop simples para calcular o fatorial, enquanto a versão recursiva chama a função recursivamente n vezes, 
+o que pode consumir mais memória devido à pilha de chamadas. Em termos de eficiência, especialmente para valores grandes de n, a versão 
+iterativa é geralmente mais eficiente em termos de uso de memória e operações.
