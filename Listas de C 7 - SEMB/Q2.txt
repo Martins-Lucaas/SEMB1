@@ -1,0 +1,5 @@
+
+a) *p : Retorna o valor apontado por p, ou seja, obtém o conteúdo da memória para a qual p aponta.
+b) *&p : Obtém o valor do próprio ponteiro p, que é o endereço de i, e, em seguida, desreferencia esse endereço para obter o valor armazenado em i.
+c) &*p : Começa desreferenciando o ponteiro p para obter o endereço de i e, em seguida, obtém o endereço desse valor desreferenciado.
+d) *&i : Obtém o endereço da variável i e, em seguida, desreferencia esse endereço para obter o valor armazenado em i.
