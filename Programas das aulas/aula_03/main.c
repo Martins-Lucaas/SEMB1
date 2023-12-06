@@ -1,43 +1,35 @@
-#include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
 
-#define STM32_ADC1_BASE_ADDR 0x40012000
+// Endereço base do periférico
+#define PERIPHERAL_BASE_ADDRESS 0xABC00
 
-#define STM32_ADC_SR_OFFSET  0x00
-#define STM32_ADC_CR2_OFFSET 0x08
+// Offset do registrador a ser modificado
+#define REGISTER_OFFSET 0x08
 
-#define STM32_ADC1_SR_REG  STM32_ADC1_BASE_ADDR + STM32_ADC_SR_OFFSET
-#define STM32_ADC1_CR2_REG STM32_ADC1_BASE_ADDR + STM32_ADC_CR2_OFFSET
+#define SomaREG PERIPHERAL_BASE_ADDRESS + REGISTER_OFFSET
+int main() {
 
-#define STM32_ADC_SR_EOC   (1 << 1)
 
-#define STM32_ADC_CR2_ADON (1 << 0)
-#define STM32_ADC_CR2_CONT (1 << 1)
+    //Registrador a ser modificado
+    uint32_t *regUsage = (uint32_t *)(PERIPHERAL_BASE_ADDRESS + REGISTER_OFFSET);
 
-int main(void) {
+    uint32_t setmask = (7 << 5);
+    printf("print %d", setmask);
 
-  uint32_t adc_sr  = 0x00000000;
-  uint32_t adc_cr2 = 0x12345678;
-
-  // uint32_t *pADC_SR  = (uint32_t *)STM32_ADC1_SR_REG;
-  uint32_t *pADC_SR  = &adc_sr;
-  // uint32_t *pADC_CR2 = (uint32_t *)STM32_ADC1_CR2_REG;
-  uint32_t *pADC_CR2 = &adc_cr2;
-
-  uint32_t reg = *pADC_CR2;
-  reg |= (STM32_ADC_CR2_ADON | STM32_ADC_CR2_CONT);
-  *pADC_CR2 = reg;
-
-  while(!(*pADC_SR & STM32_ADC_SR_EOC));
-
-  reg = *pADC_CR2;
-  reg &= ~(STM32_ADC_CR2_ADON);
-  *pADC_CR2 = reg;
+    //0000 0000 0000 0000
+    //0000 0000 0110 0000
+    //0000 0000 0000 0111
 
 
 
+    uint32_t cleanmask = (3 << 5);
 
+    // Coloca o bit 1 na posição 4 desse registro
+    *regUsage |= setmask;
+   
+    // Limpa o registro
+    *regUsage &= cleanmask;
 
-  return EXIT_SUCCESS;
+    return 0;
 }

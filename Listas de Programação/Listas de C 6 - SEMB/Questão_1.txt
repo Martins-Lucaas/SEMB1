@@ -1,0 +1,5 @@
+Uma struct em C é usada para agrupar múltiplas variáveis com tipos de dados diferentes em uma única unidade de dados. 
+Cada membro ocupa seu próprio espaço de memória, e você pode acessá-los independentemente.
+
+Uma union é usada para economizar memória, permitindo que diferentes variáveis compartilhem o mesmo espaço de memória. 
+No entanto, apenas um membro da `union pode ser usado de cada vez.
