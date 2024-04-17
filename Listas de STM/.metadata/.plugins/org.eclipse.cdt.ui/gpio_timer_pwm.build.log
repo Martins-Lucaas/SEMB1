@@ -1,0 +1,16 @@
+11:03:12 **** Incremental Build of configuration Debug for project gpio_timer_pwm ****
+make -j24 all 
+arm-none-eabi-gcc "../App/blinky.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"App/blinky.d" -MT"App/blinky.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "App/blinky.o"
+../App/blinky.c: In function 'setup':
+../App/blinky.c:42:5: warning: implicit declaration of function 'pinMode' [-Wimplicit-function-declaration]
+   42 |     pinMode(BUTTON_PIN, INPUT); // Configura o pino do botão como entrada
+      |     ^~~~~~~
+../App/blinky.c:42:25: error: 'INPUT' undeclared (first use in this function)
+   42 |     pinMode(BUTTON_PIN, INPUT); // Configura o pino do botão como entrada
+      |                         ^~~~~
+../App/blinky.c:42:25: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [App/subdir.mk:25: App/blinky.o] Error 1
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
+
+11:03:13 Build Failed. 2 errors, 1 warnings. (took 346ms)
+

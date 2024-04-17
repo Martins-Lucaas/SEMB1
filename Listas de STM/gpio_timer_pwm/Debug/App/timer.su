@@ -1,0 +1,5 @@
+../App/timer.c:16:6:timer_pwm_start	24	static
+../App/timer.c:26:6:timer_pwm_duty	24	static
+../App/timer.c:45:6:timer_start	16	static
+../App/timer.c:55:6:timer_attach_callback	16	static
+../App/timer.c:63:6:HAL_TIM_PeriodElapsedCallback	16	static

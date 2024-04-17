@@ -1,0 +1,5 @@
+../App/blinky.c:16:6:blinky	2
+../App/blinky.c:23:6:update_duty	1
+../App/blinky.c:27:6:button_isr	3
+../App/blinky.c:42:6:setup	1
+../App/blinky.c:54:6:loop	1

@@ -1,0 +1,44 @@
+/*
+ * blinky.c
+ *
+ *  Created on: Mar 19, 2024
+ *      Author: danie
+ */
+
+#include <timer.h>
+#include "main.h"
+
+#include "digital_io.h"
+#include "timer.h"
+#include "app.h"
+
+void blinky(void) {
+	if (digitalRead(0) == LOW)
+		digitalWrite(0, HIGH);
+	else
+		digitalWrite(0, LOW);
+}
+
+void update_duty(void) {
+
+	static int duty = 0;
+	static int counter = 0;
+
+	blinky();
+
+	if (counter++ == 10) {
+		counter = 0;
+		duty += 100;
+		timer_pwm_duty(0, 1, duty);
+	}
+}
+
+void setup(void) {
+	timer_attach_callback(0, update_duty);
+	timer_start(0, 0);
+	timer_pwm_duty(0, 1, 0);
+	timer_pwm_start(0, 1, 0);
+}
+
+void loop(void) {
+}

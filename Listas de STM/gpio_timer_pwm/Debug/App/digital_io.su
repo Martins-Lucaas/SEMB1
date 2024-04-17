@@ -1,0 +1,2 @@
+../App/digital_io.c:12:5:digitalRead	24	static
+../App/digital_io.c:24:6:digitalWrite	24	static

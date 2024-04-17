@@ -1,0 +1,21 @@
+/*
+ * board.h
+ *
+ *  Created on: Mar 26, 2024
+ *      Author: danie
+ */
+
+#ifndef BOARD_H_
+#define BOARD_H_
+
+#include "main.h"
+
+GPIO_TypeDef* gpio_port_table[] = {
+	USR_LED_GPIO_Port,
+};
+
+uint16_t gpio_pin_table[] = {
+	USR_LED_Pin,
+};
+
+#endif /* BOARD_H_ */
