@@ -1,5 +1,0 @@
-../App/blinky.c:16:6:blinky	8	static
-../App/blinky.c:23:6:update_duty	8	static
-../App/blinky.c:27:6:button_isr	16	static
-../App/blinky.c:42:6:setup	8	static
-../App/blinky.c:54:6:loop	4	static

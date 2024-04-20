@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;gpio_timer_led/App/blinky.c&apos; to &apos;pisca.c&apos;" description="Rename resource &apos;blinky.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="App/blinky.c" name="pisca.c" stamp="1713655930196" updateReferences="true"/>
+</session>

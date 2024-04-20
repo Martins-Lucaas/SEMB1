@@ -1,0 +1,16 @@
+20:28:16 **** Build of configuration Debug for project gpio_timer_pwm ****
+make -j24 all 
+arm-none-eabi-gcc "../App/PWM.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"App/PWM.d" -MT"App/PWM.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "App/PWM.o"
+arm-none-eabi-gcc "../App/digital_io.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"App/digital_io.d" -MT"App/digital_io.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "App/digital_io.o"
+arm-none-eabi-gcc "../App/timer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"App/timer.d" -MT"App/timer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "App/timer.o"
+arm-none-eabi-gcc -o "gpio_timer_pwm.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\Sistemas Embarcados\SEMB1\Listas de STM\PWM\gpio_timer_pwm\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="gpio_timer_pwm.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: gpio_timer_pwm.elf
+ 
+arm-none-eabi-size  gpio_timer_pwm.elf 
+arm-none-eabi-objdump -h -S gpio_timer_pwm.elf  > "gpio_timer_pwm.list"
+   text	   data	    bss	    dec	    hex	filename
+  11104	     28	   1644	  12776	   31e8	gpio_timer_pwm.elf
+Finished building: default.size.stdout
+ 
+Finished building: gpio_timer_pwm.list
+ 

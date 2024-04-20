@@ -1,0 +1,5 @@
+../App/pisca.c:9:6:setup	1
+../App/pisca.c:15:6:loop	1
+../App/pisca.c:19:6:blinky	1
+../App/pisca.c:23:6:HAL_TIM_PeriodElapsedCallback	1
+../App/pisca.c:28:6:HAL_GPIO_EXTI_Callback	6

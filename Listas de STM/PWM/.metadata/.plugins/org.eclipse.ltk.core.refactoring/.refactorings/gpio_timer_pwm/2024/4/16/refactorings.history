@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;gpio_timer_pwm/App/blinky.c&apos; to &apos;PWM.c&apos;" description="Rename resource &apos;blinky.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="App/blinky.c" name="PWM.c" stamp="1713655692651" updateReferences="true"/>
+</session>

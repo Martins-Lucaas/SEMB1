@@ -1,0 +1,5 @@
+../App/pisca.c:9:6:setup	8	static
+../App/pisca.c:15:6:loop	4	static,ignoring_inline_asm
+../App/pisca.c:19:6:blinky	8	static
+../App/pisca.c:23:6:HAL_TIM_PeriodElapsedCallback	16	static
+../App/pisca.c:28:6:HAL_GPIO_EXTI_Callback	16	static

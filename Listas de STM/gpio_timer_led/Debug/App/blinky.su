@@ -1,4 +1,0 @@
-../App/blinky.c:12:6:setup	8	static
-../App/blinky.c:16:6:loop	4	static,ignoring_inline_asm
-../App/blinky.c:20:6:blinky	8	static
-../App/blinky.c:24:6:HAL_TIM_PeriodElapsedCallback	16	static

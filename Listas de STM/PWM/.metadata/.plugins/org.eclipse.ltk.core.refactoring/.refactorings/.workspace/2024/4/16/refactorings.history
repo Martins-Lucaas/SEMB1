@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;gpio_timer_pwm&apos;" deleteContents="false" description="Delete resource &apos;gpio_timer_pwm&apos;" element1="/gpio_timer_pwm" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1713655158366"/>
+</session>

@@ -1,0 +1,7 @@
+20:51:39 **** Incremental Build of configuration Debug for project acende ****
+make -j24 all 
+arm-none-eabi-size  acende.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8060	     20	   1644	   9724	   25fc	acende.elf
+Finished building: default.size.stdout
+ 
