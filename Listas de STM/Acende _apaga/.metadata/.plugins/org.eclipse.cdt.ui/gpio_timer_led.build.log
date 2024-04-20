@@ -1,0 +1,17 @@
+20:51:01 **** Incremental Build of configuration Debug for project gpio_timer_led ****
+make -j24 all 
+arm-none-eabi-gcc "../App/acende.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"App/acende.d" -MT"App/acende.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "App/acende.o"
+arm-none-eabi-gcc -o "gpio_timer_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\lucas\OneDrive\Documentos\Faculdade\6 Semestre\Sistemas Embarcados\SEMB1\Listas de STM\Timer LED - Copia\gpio_timer_led\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="gpio_timer_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: gpio_timer_led.elf
+ 
+arm-none-eabi-size  gpio_timer_led.elf 
+arm-none-eabi-objdump -h -S gpio_timer_led.elf  > "gpio_timer_led.list"
+   text	   data	    bss	    dec	    hex	filename
+   8060	     20	   1644	   9724	   25fc	gpio_timer_led.elf
+Finished building: default.size.stdout
+ 
+Finished building: gpio_timer_led.list
+ 
+
+20:51:01 Build Finished. 0 errors, 0 warnings. (took 600ms)
+

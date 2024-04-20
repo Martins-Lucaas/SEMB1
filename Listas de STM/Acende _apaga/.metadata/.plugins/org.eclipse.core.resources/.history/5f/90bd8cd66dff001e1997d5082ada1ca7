@@ -1,0 +1,14 @@
+/*
+ * app.h
+ *
+ *  Created on: Mar 19, 2024
+ *      Author: danie
+ */
+
+#ifndef APP_H_
+#define APP_H_
+
+void setup(void);
+void loop(void);
+
+#endif /* APP_H_ */
